@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div id = 'content'>
+    <h1>FretBoss</h1>
+    <div id = "description">
+      <p>FretBoss is a web app designed to help guitarists to memorize the position
+        of the notes on the fretboard.</p>
+    </div>
+
+      <div id = "active-box">
+          <div id = 'ready-box'>
+            <h2 id = 'ready'> Ready? </h2>
+          </div>
+
+         <div id = 'notes-box'>
+          <img id = 'guitar-img' src ='https://i.imgur.com/MILIHZ9.png'>
+         </div>
+      </div>
+
+    <div id = "settings">
+      <div id = "speed-box">
+        <label for = "speed"> Speed (in seconds): </label>
+        <input id = 'speed' type = 'number' min = "0.1" value = "1" name = "speed">
+      </div>
+
+      <div id ="flatsharp-box">
+        <label for = "flatsharp-box">Accidents:</label>
+        <input type = 'radio' id = 'sharp' name = "flatsharp" value = 'sharp' checked>
+        <label for = 'sharp'>#</label>
+        <input type = 'radio' id = 'flat' name = "flatsharp" value = 'flat'>
+        <label for = 'flat'>♭</label>
+        <input type = 'radio' id = 'both' name = "flatsharp" value = 'both'>
+        <label for = 'both'>Both</label>
+      </div>
+
+      <div id = 'representation-box'>
+        <label for = 'representation-box'> Representation: </label>
+        <input type = 'radio' id = 'letters' name = 'representation' value = 'letters' checked>
+          <label for = 'letters'> Letters </label>
+        <input type = 'radio' id = 'sheet' name = 'representation' value = 'sheet'>
+          <label for = 'sheet'>Sheet music</label>
+      </div>
+
+      <div id = notation-box>
+        <label for = 'notation-box'> Type of notation (for letters): </label>
+        <input id = 'english' type = 'radio' name = 'notation' value = 'english' required checked>
+          <label for = 'english'> English </label>
+        <input id = 'latin' type = 'radio' name = 'notation' value = "latin">
+          <label for = 'latin'> Latin </label>
+        <input id = "mixed" type = "radio" name = "notation" value = "mixed">
+          <label for = "mixed"> Mixed </label>
+      </div>
+
+      <div id = "sound-help-box">
+        <input type="checkbox" id = 'timer-check'>
+          <label for = 'timer-check'> Timer </label>
+        <input type="checkbox" id = 'help-check'>
+          <label for = 'help-check'> Show notes on the fretboard </label>
+      </div>
+
+
+      <div id = 'button-box'>
+        <button class = 'buttons' id = 'go-button'> Play </button>
+      </div>
+    </div>
+
+    <hr id = line>
+
+
+     <script src = "index.js"> </script>
+  </div>
+  <footer>
+    <p> Created by <a id = 'footer-link' href = "https://github.com/dangs12" target = "_blank">Daniel Gonçalves</a></p>
+  </footer>
+
+</body>
+</html>

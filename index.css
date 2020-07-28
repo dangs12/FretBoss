@@ -1,0 +1,198 @@
+body {
+    display: grid;
+    justify-items: center;
+    background-color: #f2e9e4;
+    font-family: Ubuntu; 
+}
+
+#content {
+    display: grid;
+    justify-items: center;
+    background-color: white;
+    width: 600px;
+    border-radius: 20px;
+}
+
+div {
+    margin: 10px;
+}
+
+h1 {
+    color: #4a4e69;
+}
+#description {
+    max-width: 400px;
+    line-height: 25px;
+}
+
+/* Active box */
+#guitar-img {
+    height: 100%;
+}
+
+#ready-box {
+    display: grid;
+    justify-content: center;
+}
+
+#notes-box {
+    top: 300px; 
+    left: 300px;
+    font-size: 90px;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 227px;
+    color: #4a4e69;
+}
+
+#sheet {
+    position: relative; 
+}
+
+#qnote {
+    display: none;
+    position: relative;
+    top: -126px; 
+    left: 10px;
+}
+
+#lines {
+    display: none;
+    position: relative; 
+    transform: rotate(180deg);
+    top: -80px; 
+    left: 10px;
+}
+
+#sharp-img {
+    position: relative; 
+    display: none;
+    top: -155px;
+    left: -25px;
+}
+
+
+#flat-img {
+    position: relative; 
+    display: none;
+    top: -165px;
+    left: -15px;
+}
+
+/* Freatboard */
+
+#help-box{
+    width: 400px;
+    height: 150px;
+}
+
+#freat-img {
+    width: 100%;
+}
+
+.dot {
+    position: relative;
+    left: 52px;
+    height: 12px;
+    width: 12px;
+    background-color: #f8961e;
+    border-radius: 50%;
+    display: inline-block;
+    
+  }
+#dot-E {
+    top: -30px;
+    left: 52px;
+
+}
+
+#dot-A {
+    top: -50px;
+    left: 41px;
+
+}
+
+#dot-D {
+    top: -70px;
+    left: 30px;
+}
+
+#dot-G {
+    top: -90px;
+    left: 16px;
+
+}
+
+#dot-B {
+    top: -110px;
+    left: 5px;
+
+}
+
+#dot-e {
+    top: -132px;
+    left: -6px;
+
+}
+
+.circle {
+    position: relative;
+    border-style: solid;
+    border-radius: 50%/50%; 
+    width: 17px;
+    height: 17px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #f8961e;
+    margin: 0px;
+    left: 24px;
+}
+
+
+#circle-one {
+    top: -56px;
+}
+
+#circle-two {
+    top: -176px;
+}
+
+/* Settings */
+#settings {
+    display: grid;
+    justify-items: center;
+}
+
+#speed {
+    width: 60px;
+}
+
+#timer {
+    width: 60px;
+}
+.buttons {
+    width: 130px;
+    height: 60px;
+    color: white;
+    background-color: #4a4e69;
+    border: 2px solid white;
+    border-radius: 200px;
+    font-family: Ubuntu;
+    font-weight: bold;
+}
+.buttons:hover{
+    background-color: #c9ada7;
+
+}
+
+#footer-link {
+    color:#4a4e69;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#footer-link:hover {
+   font-size: 17px;
+}
+
