@@ -61,6 +61,8 @@ function dotFretFun (pos, repr) {
     
         for (let j = 0; j < 6; j++) {
             document.querySelector(dotArray[j]).style.left = (dotLeft[j] + (29 * fret[j])) + 'px';
+            document.querySelector(dotArray[j]).style.backgroundColor = '#f8961e';
+
         }
         // Circle
         if ([7, 12, 5, 10, 2].includes(pos)) {
