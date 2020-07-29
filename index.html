@@ -29,11 +29,12 @@
     <div id = "settings">
       <div id = "speed-box">
         <label for = "speed"> Speed (in seconds): </label>
+        <br>
         <input id = 'speed' type = 'number' min = "0.1" value = "1" name = "speed">
       </div>
 
       <div id ="flatsharp-box">
-        <label for = "flatsharp-box">Accidents:</label>
+        <label for = "flatsharp-box">Accidents:</label> <br>
         <input type = 'radio' id = 'sharp' name = "flatsharp" value = 'sharp' checked>
         <label for = 'sharp'>#</label>
         <input type = 'radio' id = 'flat' name = "flatsharp" value = 'flat'>
@@ -43,15 +44,15 @@
       </div>
 
       <div id = 'representation-box'>
-        <label for = 'representation-box'> Representation: </label>
-        <input type = 'radio' id = 'letters' name = 'representation' value = 'letters' checked>
-          <label for = 'letters'> Letters </label>
-        <input type = 'radio' id = 'sheet' name = 'representation' value = 'sheet'>
-          <label for = 'sheet'>Sheet music</label>
+        <label for = 'representation-box'> Representation: </label> <br>
+        <input type = 'radio' id = 'letters-radio' name = 'representation' value = 'letters' checked>
+          <label for = 'letters-radio'> Letters </label>
+        <input type = 'radio' id = 'sheet-radio' name = 'representation' value = 'sheet'>
+          <label for = 'sheet-radio'>Sheet music</label>
       </div>
 
       <div id = notation-box>
-        <label for = 'notation-box'> Type of notation (for letters): </label>
+        <label for = 'notation-box'> Type of notation (for letters): </label> <br>
         <input id = 'english' type = 'radio' name = 'notation' value = 'english' required checked>
           <label for = 'english'> English </label>
         <input id = 'latin' type = 'radio' name = 'notation' value = "latin">

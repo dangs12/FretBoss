@@ -1,3 +1,4 @@
+
 /////////////////// GLOBAL VARIABLES ///////////////
 let seg, min, time, noteP, inputSettings, init, tto,
 withHelp, dotArray, timerLoop, timerTrigger, noteLoop, firstNote,
@@ -49,7 +50,7 @@ function showFreat() {
 // Show notes on freatboard
 function dotFretFun (pos, repr) {
     dotArray = ['#dot-E', '#dot-A', '#dot-D', '#dot-G', '#dot-B', '#dot-e'];
-    let dotLeft = [23, 12, 1, -13, -24, -35];
+    let dotLeft = [17, 8, 0, 13, -9, -27];
 
     if (repr == 'letters') {
         pos == 0 ? pos = 12 : pos;
@@ -60,13 +61,13 @@ function dotFretFun (pos, repr) {
         // Dots
     
         for (let j = 0; j < 6; j++) {
-            document.querySelector(dotArray[j]).style.left = (dotLeft[j] + (29 * fret[j])) + 'px';
+            document.querySelector(dotArray[j]).style.left = (dotLeft[j] + (22 * fret[j])) + 'px';
             document.querySelector(dotArray[j]).style.backgroundColor = '#f8961e';
 
         }
         // Circle
         if ([7, 12, 5, 10, 2].includes(pos)) {
-            let fretCircle1 = -56 - ([7, 12, 5, 10, 2].indexOf(pos) * 20); 
+            let fretCircle1 = -49 - ([7, 12, 5, 10, 2].indexOf(pos) * 14); 
             document.querySelector('#circle-one').style.top = fretCircle1 + 'px';
             document.querySelector('#circle-one').style.color = '#f8961e';
             if (pos == 7) {
@@ -122,11 +123,11 @@ function dotFretFun (pos, repr) {
             }
 
             if (local[i][1] == 0) {
-                let fretCircle1 = -56 - (dotArray.indexOf(local[i][0]) * 20); 
+                let fretCircle1 = -49 - (dotArray.indexOf(local[i][0]) * 14); 
                 document.querySelector('#circle-one').style.top = fretCircle1 + 'px';
                 document.querySelector('#circle-one').style.color = '#f8961e';
             } else if (local[i][1] > 0 && local[i][1] <= 12) { 
-                document.querySelector(local[i][0]).style.left = (dotLeft[dotArray.indexOf(local[i][0])] + (29 * local[i][1])) + 'px';
+                document.querySelector(local[i][0]).style.left = (dotLeft[dotArray.indexOf(local[i][0])] + (22 * local[i][1])) + 'px';
                 document.querySelector(local[i][0]).style.backgroundColor = '#f8961e';   
             }
           

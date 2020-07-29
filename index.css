@@ -1,3 +1,4 @@
+
 body {
     display: grid;
     justify-items: center;
@@ -8,15 +9,16 @@ body {
 #content {
     display: grid;
     justify-items: center;
+    width: 600px;
     background-color: white;
-    max-width: 600px;
-    min-width: 300px;
     border-radius: 20px;
 }
 
 div {
-    margin: 10px;
+    margin-bottom: 10px;
 }
+
+
 
 h1 {
     color: #4a4e69;
@@ -43,8 +45,7 @@ h1 {
     display: grid;
     justify-items: center;
     justify-content: center;
-    max-width: 400px;
-    min-width: 300px;
+    width: 400px;
     height: 227px;
     color: #4a4e69;
 }
@@ -84,58 +85,63 @@ h1 {
 }
 
 /* Freatboard */
+#active-box {
+    display: grid;
+    justify-items: center;
+}
 
 #help-box{
-    width: 400px;
-    height: 150px;
+    width: 300px;
+    height: 113px;
 }
 
 #freat-img {
     width: 100%;
 }
 
+
 .dot {
     position: relative;
     left: 52px;
-    height: 12px;
-    width: 12px;
+    height: 9px;
+    width: 9px;
     background-color: #f8961e;
     border-radius: 50%;
     display: inline-block;
     
   }
 #dot-E {
-    top: -30px;
-    left: 52px;
+    top: -27px;
+    left: 39px;
 
 }
 
 #dot-A {
-    top: -50px;
-    left: 41px;
+    top: -43px;
+    left: 30px;
 
 }
 
 #dot-D {
-    top: -70px;
-    left: 30px;
+    top: -58px;
+    left: 22px;
 }
 
 #dot-G {
-    top: -90px;
-    left: 16px;
+    top: -73px;
+    left: 13px;
 
 }
 
 #dot-B {
-    top: -110px;
-    left: 5px;
+    top: -90px;
+    left: 4px;
 
 }
 
 #dot-e {
-    top: -132px;
-    left: -6px;
+    top: -105px;
+    left: -5px;
 
 }
 
@@ -143,25 +149,27 @@ h1 {
     position: relative;
     border-style: solid;
     border-radius: 50%/50%; 
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
     background-color: rgba(0, 0, 0, 0);
     color: #f8961e;
     margin: 0px;
-    left: 24px;
+    left: 17px;
 }
 
 
 #circle-one {
-    top: -56px;
+    top: -49px;
 }
 
 #circle-two {
-    top: -176px;
+    top: -141px;
 }
 
 /* Settings */
 #settings {
+    text-align: center;
+    line-height: 30px;
     display: grid;
     justify-items: center;
 }
@@ -198,16 +206,28 @@ h1 {
    font-size: 17px;
 }
 
-@media only screen and (max-width: 320px) {
-    body {
-      background-color: lightblue;
-    }
+@media only screen and (max-width: 600px) {
 
-    #content {
-        display: grid;
-        justify-items: center;
-        background-color: white;
-        width: 320px;
-        border-radius: 20px;
-    }
+#content {
+    width: 300px;
+}
+
+div {
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+#description {
+    display: none;
+    width: 300px;
+}
+
+#notes-box {
+    width: 300px;
+}
+
+#sheet {
+    width: 300px;
+}
+
   }
