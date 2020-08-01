@@ -45,34 +45,47 @@ h1 {
     display: grid;
     justify-items: center;
     justify-content: center;
-    width: 400px;
+    width: 300px;
     height: 227px;
     color: #4a4e69;
 }
 
 #sheet {
+    width: 300px;
     position: relative; 
 }
 
 #qnote {
     display: none;
     position: relative;
-    top: -126px; 
+    top: -95px; 
     left: 10px;
 }
 
-#lines {
+.lines {
     display: none;
     position: relative; 
-    transform: rotate(180deg);
-    top: -80px; 
+    transform: rotate(180deg);    
+    top: -60px; 
     left: 10px;
+}
+
+#lines1 {
+    display: none;
+}
+
+#lines2 {
+    display: none;
+}
+
+#lines3 {
+    display: none;
 }
 
 #sharp-img {
     position: relative; 
     display: none;
-    top: -155px;
+    top: -135px;
     left: -25px;
 }
 
@@ -81,7 +94,7 @@ h1 {
     position: relative; 
     display: none;
     top: -165px;
-    left: -15px;
+    left: -25px;
 }
 
 /* Freatboard */

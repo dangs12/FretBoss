@@ -1,4 +1,3 @@
-
 /////////////////// GLOBAL VARIABLES ///////////////
 let seg, min, time, noteP, inputSettings, init, tto,
 withHelp, dotArray, timerLoop, timerTrigger, noteLoop, firstNote,
@@ -188,7 +187,6 @@ function timer() {
 
 }
 
-
 ///////////////// FUNCTIONS ///////////////// 
 // Postion of notes on sheet
 let qnotObj = {
@@ -210,64 +208,68 @@ let accObj = {
 for (let i = 0; i <= 21; i++) {
     //Accidents
     if (i >= 6 && i < 17) {
-        accObj['top_sharp'].push(-101 - (9 * i) + 'px');
-        accObj['top_flat'].push(-111 - (9 * i) + 'px');
+        accObj['top_sharp'].push(-80 - (7 * i) + 'px');
+        accObj['top_flat'].push(-90 - (7 * i) + 'px');
     } else {
-        accObj['top_sharp'].push(-155 - (9 * i) + 'px');
-        accObj['top_flat'].push(-165 - (9 * i) + 'px');
+        accObj['top_sharp'].push(-125 - (7 * i) + 'px');
+        accObj['top_flat'].push(-132 - (7 * i) + 'px');
     }
 
     if(i <= 5) {
-        qnotObj['top'].push(-126 - (9 * i) + 'px');
+        qnotObj['top'].push(-95 - (7 * i) + 'px');
         qnotObj['transform'].push('rotate(0deg)');
-    } else if (i <= 8) {
-        qnotObj['top'].push (-73 - (9 * i) + 'px');
-        qnotObj['transform'].push('rotate(0deg)')
+    } else if (i <= 10) {
+        qnotObj['top'].push(-57 - (7 * i) + 'px');
+        qnotObj['transform'].push('rotate(0deg)');
     } else if (i <= 16) {
-        qnotObj['top'].push(-28 - (9 * i) + 'px');
+        qnotObj['top'].push(-21 - (7 * i) + 'px');
         qnotObj['transform'].push('rotate(180deg)');
     } else if (i <= 21) {
-        qnotObj['top'].push(-82 - (9 * i) + 'px');
+        qnotObj['top'].push(-56 - (7 * i) + 'px');
         qnotObj['transform'].push('rotate(180deg)');
     } 
-    // Lines
-    if (i >= 0 && i <= 5 || i >= 17 && i <= 21) {
-        linesObj['display'].push('inline');
-        if (i == 0 || i == 2 || i == 4) {
-            linesObj['top'].push(-80 - (9 * i) + 'px');
-
-        } else if (i == 17 || i == 19 || i == 21) {
-            linesObj['top'].push(-35 - (9 * i) + 'px');
-    } else {
-        linesObj['top'].push(linesObj['top'][i - 1]);
-    }
-        if (i >= 0 && i <= 5) {
-            linesObj['transform'].push('rotate(180deg)');
-        } else {
-            linesObj['transform'].push('rotate(0deg)');
-        }
-    } else {
-        linesObj['top'].push('0px');
-        linesObj['display'].push('none');
-        linesObj['transform'].push('rotate(0deg)');
-    }
 }
 
 
 // Display notes on sheet 
 function displayQNote(arrayArg) {
     let i = arrayArg[0];
+    if (i > 5 && i < 17 && (arrayArg[1] == '♭' || arrayArg[1] == '#')) {
+        document.querySelector('#qnote').style.top = parseInt(qnotObj['top'][i].slice(0, -2)) + 7 + 'px';
+    } else {
+        document.querySelector('#qnote').style.top = qnotObj['top'][i];
+    }
     //Qnote
-    document.querySelector('#qnote').style.top = qnotObj['top'][i];
     document.querySelector('#qnote').style.transform = qnotObj['transform'][i]; 
     document.querySelector('#qnote').style.display = 'inline'; 
 
     //Lines
-    document.querySelector('#lines').style.top = linesObj['top'][i];
-    document.querySelector('#lines').style.top.transform = linesObj['transform'][i];
-    document.querySelector('#lines').style.display = linesObj['display'][i];
+    let linesNames = ['#lines1', '#lines2', '#lines3'];
+    let linesDisplay = ['none', 'none', 'none'];
+    let linesRotate = 'rotate(180deg)';
     
+    if ([0, 1, 21, 22].includes(i)) {
+        linesDisplay[2] = 'inline';
+    } else if ([2, 3, 19, 20].includes(i)) {
+        linesDisplay[1] = 'inline';
+    } else if ([4, 5, 17, 18].includes(i)) {
+        linesDisplay[0] = 'inline';
+    }
+
+    for (let j = 0; j <= 2; j++) {
+        document.querySelector(linesNames[j]).style.display = linesDisplay[j];
+        if(i >= 17) {
+            linesRotate = 'rotate(0deg)';
+            document.querySelectorAll('.lines')[j].style.top = '-157px';
+        } else {
+            document.querySelectorAll('.lines')[j].style.top = '-60px';
+        }
+        document.querySelectorAll('.lines')[j].style.transform = linesRotate;
+
+    }
+
     //Accidents
+
     if (arrayArg[1] == '♭') {
         document.querySelector('#flat-img').style.top = accObj['top_flat'][i];  
         document.querySelector('#flat-img').style.display = 'inline';
@@ -282,7 +284,8 @@ function displayQNote(arrayArg) {
         document.querySelector('#sharp-img').style.display = 'none';
         document.querySelector('#flat-img').style.display = 'none';
     }
-}    
+}  
+
 
 // Display letter note
 function displayNote(noteArg) {        
@@ -381,7 +384,6 @@ function randomNote() {
 
 }
 
-
 // Create 3..2..1
 function ttoFun() {
     if (init > 0) {
@@ -417,12 +419,25 @@ function action() {
         document.querySelector('#notes-box').appendChild(sheetImg);
         
         let linesImg = document.createElement('img');
-        linesImg.setAttribute('src', 'https://i.imgur.com/06sEaIk.png');
-        linesImg.setAttribute('id', 'lines');
+        linesImg.setAttribute('src', 'https://i.imgur.com/r7s6a6c.png');
+        linesImg.setAttribute('id', 'lines3');
+        linesImg.setAttribute('class', 'lines');
         document.querySelector('#notes-box').appendChild(linesImg);  
         
+        linesImg = document.createElement('img');
+        linesImg.setAttribute('src', 'https://i.imgur.com/6upqgyq.png');
+        linesImg.setAttribute('id', 'lines2');
+        linesImg.setAttribute('class', 'lines');
+        document.querySelector('#notes-box').appendChild(linesImg); 
+        
+        linesImg = document.createElement('img');
+        linesImg.setAttribute('src', 'https://i.imgur.com/ndYn9kA.png');
+        linesImg.setAttribute('id', 'lines1');
+        linesImg.setAttribute('class', 'lines');
+        document.querySelector('#notes-box').appendChild(linesImg); 
+
         let qnoteImg = document.createElement('img');
-        qnoteImg.setAttribute('src', 'https://i.imgur.com/PvUnoRB.png');
+        qnoteImg.setAttribute('src', 'https://i.imgur.com/0Sk7rHK.png');
         qnoteImg.setAttribute('id', 'qnote');
         document.querySelector('#notes-box').appendChild(qnoteImg);
         
@@ -439,6 +454,9 @@ function action() {
     
     // Remove ready
     document.querySelector('#ready').textContent = '';
+
+    // Remove guitar img
+    document.querySelector('#guitar-img').remove();
 
     // Start 3..2..1
     init = 3;
