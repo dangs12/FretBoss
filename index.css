@@ -3,13 +3,17 @@ body {
     display: grid;
     justify-items: center;
     background-color: #f2e9e4;
+    background-image: url("https://i.imgur.com/0Vcgj8k.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
     font-family: Ubuntu; 
 }
 
 #content {
     display: grid;
     justify-items: center;
-    width: 600px;
+    width: 500px;
     background-color: white;
     border-radius: 20px;
 }
@@ -17,8 +21,6 @@ body {
 div {
     margin-bottom: 10px;
 }
-
-
 
 h1 {
     color: #4a4e69;
@@ -209,6 +211,9 @@ h1 {
 
 }
 
+footer {
+    color: white;
+}
 #footer-link {
     color:#4a4e69;
     font-weight: bold;
@@ -221,26 +226,25 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 
-#content {
-    width: 300px;
-}
+    #content {
+        width: 300px;
+    }
 
-div {
-    margin-bottom: 7px;
-    margin-top: 7px;
-}
+    div {
+        margin-bottom: 7px;
+        margin-top: 7px;
+    }
 
-#description {
-    display: none;
-    width: 300px;
-}
+    #description {
+        display: none;
+        width: 300px;
+    }
 
-#notes-box {
-    width: 300px;
-}
+    #notes-box {
+        width: 300px;
+    }
 
-#sheet {
-    width: 300px;
+    #sheet {
+        width: 300px;
+    }
 }
-
-  }
