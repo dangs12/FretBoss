@@ -50,7 +50,7 @@ function showFreat() {
 // Show notes on freatboard
 function dotFretFun (pos, repr) {
     dotArray = ['#dot-E', '#dot-A', '#dot-D', '#dot-G', '#dot-B', '#dot-e'];
-    let dotLeft = [17, 8, 0, 13, -18, -27];
+    let dotLeft = [17, 8, 0, -9, -18, -27];
 
     if (repr == 'letters') {
         pos == 0 ? pos = 12 : pos;
