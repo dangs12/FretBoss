@@ -4,9 +4,10 @@ body {
     justify-items: center;
     background-color: #f2e9e4;
     background-image: url("https://i.imgur.com/0Vcgj8k.jpg");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;
+    background-repeat: no-repeat; 
     background-size: cover;
+    background-attachment:fixed;
     font-family: Ubuntu; 
 }
 
@@ -190,11 +191,13 @@ h1 {
 }
 
 #speed {
-    width: 60px;
+    width: 40px;
+    padding-left: 20px;
 }
 
 #timer {
-    width: 60px;
+    width: 40px;
+    padding-left: 20px;
 }
 .buttons {
     width: 130px;
@@ -246,5 +249,27 @@ footer {
 
     #sheet {
         width: 300px;
+    }
+}
+
+
+@media only screen and (max-height: 3000px) {
+    body {
+        background-image: url("https://i.imgur.com/MsnZxQm.jpg");
+
+    }
+}
+
+@media only screen and (max-height: 2000px) {
+    body {
+        background-image: url("https://i.imgur.com/a33kkkF.jpg");
+
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    body {
+        background-image: url("https://i.imgur.com/H26SgwQ.jpg");
+
     }
 }
