@@ -391,7 +391,7 @@ function ttoFun() {
         init--;
     } else {
         clearInterval(tto);
-        document.querySelector('#ready').textContent = '';
+       
         init = 3;
     }
  }
@@ -471,6 +471,12 @@ function action() {
         }
         setTimeout(timer, 3000);
         timerTrigger = setTimeout(timerTriggerFun, 3000);
+    } else {
+        setTimeout(function() {
+            document.querySelector('#ready').textContent = ''; 
+        }, 3000)
+           
+           
     }
     
       // Start notes
@@ -529,6 +535,12 @@ function stopFun(argLoop, argFirst, argLoopTrigger,
         document.querySelector('#circle-two').style.color = 'rgba(0, 0, 0, 0)';
         
     }
+
+    let guitarImg = document.createElement('img');
+    guitarImg.setAttribute('id', 'guitar-img');
+    guitarImg.setAttribute('src', 'https://i.imgur.com/MILIHZ9.png')
+    document.querySelector('#notes-box').appendChild(guitarImg);
+
 }
 
 
