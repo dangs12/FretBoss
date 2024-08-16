@@ -3,13 +3,18 @@ body {
     display: grid;
     justify-items: center;
     background-color: #f2e9e4;
+    background-image: url("https://i.imgur.com/0Vcgj8k.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment:fixed;
     font-family: Ubuntu; 
 }
 
 #content {
     display: grid;
     justify-items: center;
-    width: 600px;
+    width: 500px;
     background-color: white;
     border-radius: 20px;
 }
@@ -17,8 +22,6 @@ body {
 div {
     margin-bottom: 10px;
 }
-
-
 
 h1 {
     color: #4a4e69;
@@ -45,34 +48,47 @@ h1 {
     display: grid;
     justify-items: center;
     justify-content: center;
-    width: 400px;
+    width: 300px;
     height: 227px;
     color: #4a4e69;
 }
 
 #sheet {
+    width: 300px;
     position: relative; 
 }
 
 #qnote {
     display: none;
     position: relative;
-    top: -126px; 
+    top: -95px; 
     left: 10px;
 }
 
-#lines {
+.lines {
     display: none;
     position: relative; 
-    transform: rotate(180deg);
-    top: -80px; 
+    transform: rotate(180deg);    
+    top: -60px; 
     left: 10px;
+}
+
+#lines1 {
+    display: none;
+}
+
+#lines2 {
+    display: none;
+}
+
+#lines3 {
+    display: none;
 }
 
 #sharp-img {
     position: relative; 
     display: none;
-    top: -155px;
+    top: -135px;
     left: -25px;
 }
 
@@ -81,7 +97,7 @@ h1 {
     position: relative; 
     display: none;
     top: -165px;
-    left: -15px;
+    left: -25px;
 }
 
 /* Freatboard */
@@ -175,11 +191,13 @@ h1 {
 }
 
 #speed {
-    width: 60px;
+    width: 40px;
+    padding-left: 20px;
 }
 
 #timer {
-    width: 60px;
+    width: 40px;
+    padding-left: 20px;
 }
 .buttons {
     width: 130px;
@@ -196,6 +214,9 @@ h1 {
 
 }
 
+footer {
+    color: white;
+}
 #footer-link {
     color:#4a4e69;
     font-weight: bold;
@@ -208,26 +229,47 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 
-#content {
-    width: 300px;
+    #content {
+        width: 300px;
+    }
+
+    div {
+        margin-bottom: 7px;
+        margin-top: 7px;
+    }
+
+    #description {
+        display: none;
+        width: 300px;
+    }
+
+    #notes-box {
+        width: 300px;
+    }
+
+    #sheet {
+        width: 300px;
+    }
 }
 
-div {
-    margin-bottom: 7px;
-    margin-top: 7px;
+
+@media only screen and (max-height: 3000px) {
+    body {
+        background-image: url("https://i.imgur.com/MsnZxQm.jpg");
+
+    }
 }
 
-#description {
-    display: none;
-    width: 300px;
+@media only screen and (max-height: 2000px) {
+    body {
+        background-image: url("https://i.imgur.com/a33kkkF.jpg");
+
+    }
 }
 
-#notes-box {
-    width: 300px;
-}
+@media only screen and (max-height: 900px) {
+    body {
+        background-image: url("https://i.imgur.com/H26SgwQ.jpg");
 
-#sheet {
-    width: 300px;
+    }
 }
-
-  }
